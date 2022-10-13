@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="This is your site description. Max 155 characters, but atleast 100 characters. Google uses this for site description.">
+    
+    <!--Open Graph Protocol stuff, https://ogp.me/-->
+    <meta property="og:title" content="Title of an article, for example">
+    <meta property="og:description" content="Possibly the same but not necessarily as the description above">
+    <!-- Square image with the main content in the middle at 2:1 ratio -->
+    <meta property="og:image" content="siteimage.png">
+    <meta property="og:image:alt" content="Description of our image">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website"> <!-- options: article, video, movie, website -->
+    <meta name="twitter:card" content="summary_large_image"> <!--Valid options: summary_large_image and summary-->
+    <meta property="og:url" content="https://hannu.korvala.fi">
+    <link rel="canonical" href="https://hannu.korvala.fi"> <!--Says that this page is the source of truth-->
+    <meta name="og:site_name" content="hannu.korvala.fi">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--<link rel="icon" href="favicon.svg" type="image/svg+xml">-->
+
+    <meta name="robots" content="Noindex, Follow"> <!--Do not index this page, but index the pages we have links to here-->
+    <meta name="robots" content="Noimageindex"> <!--Don't index images-->
+    <meta name="robots" content="Noarchive"> <!--Do not archive or cache this page-->
+
+</head>
+<body>
+
+    <h1>Advanced HTML</h1>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.4473036110053!2d25.464533216563183!3d65.01145195012386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468032af88c67bcd%3A0x2e48b2f9e2a1b585!2sCafe%20Rooster!5e0!3m2!1sfi!2sfi!4v1665676952174!5m2!1sfi!2sfi"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+</body>
+<script>
+    (function app() {
+        app.startUp = function() {
+            console.log("Started app");
+        }
+    })(window.app = window.app || {})
+
+    app.startUp();
+</script>
+</html>

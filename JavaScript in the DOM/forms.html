@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript in the DOM</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body>
+    <main>
+        <a href="index.html">GOTO MAIN</a>
+        <h1>DOM Demo</h1>
+        <form action="post">
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" required />
+            </div>
+            <div>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" required />
+            </div>
+            <div>
+                <button id="submit" type="submit">Submit</button>
+                <button id="reset" type="reset">Reset</button>
+            </div>
+        </form>
+        <div id="list-section">
+            <h2>Questbook Entries</h2>
+            <small>Total Guests: <span id="totalGuests">0</span></small>
+            <ul id="items">
+
+            </ul>
+        </div>
+    </main>
+    <script src="js/forms.js"></script>
+</body>
+
+</html>

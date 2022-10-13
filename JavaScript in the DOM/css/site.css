@@ -1,0 +1,23 @@
+.support-paragraph {
+    font-style: italic;
+}
+
+.dark-mode {
+    color: white;
+    background-color: black;
+}
+
+.new-item {
+    text-shadow: 1px 1px 2px red;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: grey;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 1.5rem;
+    cursor: pointer;
+}

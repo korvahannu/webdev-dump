@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript in the Dom</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+    <main>
+        <a href="forms.html">GOTO FORMS</a>
+        <h1>Welcome to the DOM demo</h1>
+        <p id="first-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non debitis, dolorum hic eaque
+            impedit pariatur
+            error perspiciatis cum natus voluptates!</p>
+        <p id="second-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Minus ipsa temporibus praesentium, molestias cum
+            libero quod quisquam magnam reiciendis odio aliquid nihil velit suscipit, repellat culpa esse delectus in
+            saepe laborum unde. Ipsa, at rerum doloremque iusto quos consequuntur iure quisquam nemo provident, neque
+            dolorem repudiandae non veritatis obcaecati esse.</p>
+        <p id="third-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet.</p>
+        <div id="list-section">
+            <p id="error-text" style="color: red">
+                Your input was invalid!
+            </p>
+            <input type="text" id="add-to-list-text" />
+            <a id="add-to-list" href="#">Add new element to list</a>
+            <ul id="key-items">
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ul>
+        </div>
+        <div>
+            <ul id="good-foods">
+
+            </ul>
+        </div>
+        <div>
+            <h2 id="display-message">Send Email</h2>
+            <p id="status-message"></p>
+            <a id="send-email" href="#">Send Email with Mistake</a> <br />
+            <a id="recall-email" href="#">Recall Email</a>
+        </div>
+    </main>
+    <script src="js/list.js"></script>
+
+    <script src="js/email.js"></script>
+
+    <script>
+
+        // DOM - document object model, holds the document
+        // window - the global scope, knows about everything about the window
+        // document - window.document, represents the entire page, what is being rendered, screen resolution, url etc.
+
+        // const keyItems = document.getElementById('key-items');
+        // console.log(keyItems)
+
+        /*
+        const supportParagraph = document.querySelector('.support-paragraph'); // Selects the first one
+        const firstParagraph = document.querySelector('p');
+        const keyItems = document.querySelector('#key-items');
+        const specificSelection = document.querySelector('div ul li'); // Returns first that matches
+        console.log(firstParagraph);
+        console.log(supportParagraph);
+        console.log(keyItems);
+        console.log(specificSelection);
+
+        let paragraphs = document.querySelectorAll('p'); // Returns a list of found elements
+
+        paragraphs.forEach(p => {
+            console.log(p);
+        });
+        */
+
+        // const list = document.querySelector('ul');
+        // list.innerHTML = '<li>test 1</li><li><h2>hey</h2></li>'
+
+        // const p = document.querySelector('.support-paragraph');
+        // p.remove();
+
+        // const heading = document.querySelector('h1');
+        // heading.style.color = 'blue';
+        // heading.style.fontSize = '1.25rem';
+
+        // const p1 = document.querySelector('p');
+        // p1.classList.add('dark-mode');
+
+        // const paragraphs = document.querySelectorAll('p');
+
+        // paragraphs.forEach(p => {
+        //     if(p.classList.contains('support-paragraph')) {
+        //         p.classList.add('dark-mode');
+        //         p.classList.remove('support-paragraph');
+        //     }
+        // });
+
+        // document.body.style.backgroundColor = 'red';
+
+        /*
+        const section = document.getElementById('list-section');
+        const list = section.querySelector('ul'); // Queries inside the tag
+        const items = list.children; // Gets all child elements of list. TODO: This is of type HMTLCollection, forEach not supported
+        const itemsArray = Array.from(items); // Now foreach works
+        itemsArray.forEach(i => {
+            console.log(i);
+        });
+        */
+
+        // const section = document.getElementById('key-items');
+        // const parent = section.parentElement;
+        // const mainElement = section.closest('main');
+
+        // const keyItems = document.getElementById('key-items');
+        // const nextItem = listItem.nextElementSibling;
+        // const finalItem = listItem.nextElementSibling;
+        // const unknownItem = listItem.nextElementSibling; // null
+
+        /* while(listItem !== null) {
+            console.log(listItem);
+            listItem = listItem.nextElementSibling;
+        } */
+
+        /*
+        keyItems.innerHTML += '<li>Our fourth li</li>';
+
+        const foods = ['Burger', 'Hotdog', 'Pasta', 'Bread'];
+
+        const foodList = document.getElementById('good-foods');
+
+        foods.forEach(f => {
+            foodList.innerHTML += `<li>${f}</li>`; // This is ok, but slow
+
+            const el = document.createElement('li'); // This is better, but causes rerenders and recalculations.
+            el.style.color = 'blue';
+            el.style.fontWeight = 'bold';
+            el.innerText = f;
+            foodList.appendChild(el);
+        });
+
+        // Best way. Reduces rerenders and calculations from 4 to 1
+        const fragment = new DocumentFragment();
+        foods.forEach(f => {
+            const element = document.createElement('li');
+            element.innerText = f;
+            element.style.marginLeft = '16px';
+            fragment.append(element);
+        });
+        foodList.appendChild(fragment);
+        */
+
+        /*
+        const mainElement = document.querySelector('main');
+        const keyItems = document.getElementById('key-items');
+        const mainHeader = document.querySelector('h1');
+        let i = 4;
+
+        mainElement.addEventListener('click', addListItem);
+        mainHeader.addEventListener('click', addListItemFormH1);
+
+        function addListItem(event) {
+            const element = document.createElement('li');
+            element.innerHTML = `LI #${i}`;
+            i++;
+            keyItems.appendChild(element);
+        }
+
+        function addListItemFormH1(event) {
+            // stopPropagation prevents the other eventlistener from triggering aswell
+            event.stopPropagation();
+            const element = document.createElement('li');
+            element.innerHTML = `LI FROM H1 #${i}`;
+            i++;
+            keyItems.appendChild(element);
+        }
+        */
+
+    </script>
+</body>
+
+</html>

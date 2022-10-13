@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/site.css">
+    <title>JavaScript in the DOM</title>
+</head>
+
+<body>
+    <main>
+        <h1>Task list demo</h1>
+        <form id="taskForm" action="post">
+            <fieldset>
+                <legend>ADD NEW TASK</legend>
+                <div>
+                    <label for="taskInput">Task: </label>
+                    <input type="text" id="taskInput" name="taskInput" required />
+                </div>
+                <div>
+                    <button type="submit" id="submit">Add Task</button>
+                    <button type="reset">Clear Form</button>
+                    <button id="remove" type="button">Remove Completed Tasks</button>
+                </div>
+            </fieldset>
+        </form>
+        <div>
+            <ul id="taskList">
+
+            </ul>
+        </div>
+    </main>
+    <script src="js/tasklist.js"></script>
+    <script>
+        app.todoStartup();
+    </script>
+</body>
+
+</html>
