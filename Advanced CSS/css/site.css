@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting up */
+#first-div {
+    color: white;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 8px;
+}
+
+#second-div {
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#inner-div {
+    background-color: green;
+    color: yellow;
+    height: 24px;
+    width: 24px;
+}
+
+#third-div {
+    width: auto;
+    background-color:cadetblue;
+    height: 100px;
+}
+
+#fourth-div {
+    width: auto;
+    background-color: violet;
+    height: 100px;
+}
+
+/* Positioning */
+.relative {
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+.absolute {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
