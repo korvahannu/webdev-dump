@@ -3,5 +3,46 @@
     -> Describe part of an element
     pseudo-classes have :
     -> Define the state of an element
+    
+    https: //developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+    https: //developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
 */
 
+li:first-child {
+    font-size: 1.5rem;
+    color: red;
+}
+
+li:last-child {
+    font-size: 0.9rem;
+    color: blue;
+}
+
+li:nth-child(3) {
+    text-decoration: underline;
+    font-size: 1.25rem;
+}
+
+h2:nth-of-type(2) {
+    color: red;
+}
+
+#button1:hover {
+    background-color: cyan;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+p::first-line {
+    color: blue;
+    font-weight: bold;
+}
+
+p::first-letter {
+    font-size: 1.5rem;
+}
+
+#section1 p:first-of-type::first-line {
+    text-decoration: underline;
+    font-style: italic;
+}
