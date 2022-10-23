@@ -1,0 +1,61 @@
+.info {
+    background-color: red;
+}
+
+.main-info {
+    background-color: blue;
+}
+
+.info, .main-info {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.info-container {
+    display: grid;
+    grid-gap: 5px;
+    
+    /* 3 columns, each with same width */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /* same as above */
+    /* grid-template-columns: repeat(3, 1fr);*/
+
+    /* auto-fit columns with min width of 100px and max width of 1 fragment */
+    /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
+
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-areas:
+        'left1 main right1'
+        'left2 main right2'
+        'left3 main right3';
+}
+
+#imain {
+    grid-area: main;
+}
+
+#i1 {
+    grid-area: left1;
+}
+
+#i2 {
+    grid-area: left2;
+}
+
+#i3 {
+    grid-area: left3;
+}
+
+@media screen and (max-width: 1000px) {
+    .info-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'main main'
+            'left1 left2'
+            'left3 right1'
+            'right2 right3';
+    }
+}

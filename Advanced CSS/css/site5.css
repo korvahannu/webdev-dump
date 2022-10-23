@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    /* Swedish Color Palette */
+    --lighter-grey: #d2dae2;
+    --light-grey: #808e9b;
+    --grey: #485460;
+    --dark-grey: #1e272e;
+    --red: #ff3f34;
+    --light-red: #ff5e57;
+    --pink: #f53b57;
+    --light-pink: #ef5777;
+    --yellow: #ffd32a;
+    --light-yellow: #ffdd59;
+    --orange: #ffa801;
+    --light-orange: #ffc048;
+    --green: #05c46b;
+    --light-green: #0be881;
+    --blue: #3c40c6;
+    --light-blue: #575fcf;
+    --turquoise: #00d8d6;
+    --light-turquoise: #34e7e4;
+    --aqua: #0fbcf9;
+    --light-aqua: #4bcffa;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+body {
+    margin: 0;
+}
+
+div {
+    padding: 2rem;
+}
+
+#section1 {
+    background-color: var(--lighter-grey);
+    color: var(--blue);
+}
+
+#section2 {
+    background-color: var(--lighter-grey);
+    color: var(--orange);
+}
+
+#section3 {
+    background-color: var(--lighter-grey);
+    color: var(--gren, rgb(0, 168, 0)); /* Fallback Value, typo on purpose */
+}
+
+#button1 {
+    border: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--dark-grey);
+    background-color: var(--light-pink);
+    cursor: pointer;
+    width: 100%;
+}
