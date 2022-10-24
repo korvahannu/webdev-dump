@@ -1,0 +1,20 @@
+/* mixins make it possible to save multiple styles into a repeatable thing */
+p {
+  color: #06336d;
+}
+
+.container {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  /* Selects all container-item classes */
+}
+.container-item {
+  background-color: #06336d;
+  height: 125px;
+  /* Selects paragraphs inside container-item class */
+}
+.container-item p {
+  color: white;
+  border: 1px solid black;
+}

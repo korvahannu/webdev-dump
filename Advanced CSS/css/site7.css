@@ -1,0 +1,60 @@
+
+
+#section1 {
+    background-color: lightblue;
+}
+
+header, footer {
+    background-color: darkblue;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background-color: white !important;
+        color: black !important;
+        text-decoration: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    p {
+        text-align: justify;
+        orphans: 5;
+        widows: 3;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    header, footer {
+        font-size: 32px;
+    }
+
+    @page {
+        margin: 1in;
+        size: letter landscape;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")"
+    }
+    
+    /* Super cool selector to hide everything in body except main */
+    body > *:not(main) {
+        display: none;
+    }
+
+    h2 {
+        page-break-before: always;
+    }
+
+    ol {
+        page-break-inside: avoid;
+    }
+}
