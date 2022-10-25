@@ -1,0 +1,21 @@
+.checked {
+    text-decoration: line-through;
+}
+
+body {
+    background-color: #F1F2F3;
+}
+
+main {
+    max-width: 1024px;
+    margin: auto;
+    padding: 3rem;
+}
+
+#wait-indicator {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
