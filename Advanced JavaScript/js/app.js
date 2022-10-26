@@ -3,6 +3,69 @@
 
     const pageItems = {};
 
+    app.startFetchDemo = function () {
+        pageItems.loadData = document.getElementById('loadData');
+        pageItems.waitIndicator = document.getElementById('wait-indicator')
+
+        pageItems.loadData.addEventListener('click', loadApiData);
+    }
+
+    function uploadDataToApi(event) {
+        event.preventDefault();
+        pageItems.loadData.disabled = true;
+        pageItems.waitIndicator.style.display = 'block';
+
+        const data = {
+            firstName: 'Hannu',
+            lastName: 'Korvala',
+            isAlive: true
+        };
+
+        fetch('https://webhook.site/e8aa59d9-5bf7-4f8a-a7a3-f590cdda567e', {
+            method: 'POST',
+            mode: 'no-cors', // no-cors is a workaround for CORS, not recommended
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                console.log(response);
+                pageItems.waitIndicator.style.display = 'none';
+                pageItems.loadData.disabled = false;
+            },
+            error => {
+                console.log(error)
+            });
+    }
+
+    function loadApiData(event) {
+        event.preventDefault();
+        pageItems.loadData.disabled = true;
+        pageItems.waitIndicator.style.display = 'block';
+
+        fetch('https://swapi.dev/api/people/1')
+            .then(response => {
+                console.log(response);
+                
+                if (!response.status.toString().startsWith('2')) {
+                    return Promise.reject('Invalid status code');
+                }
+
+                return response.json(); // response.json() returns a promise
+            })
+            .then(data => {
+                console.log(data)
+            })
+            .catch(error => {
+                console.error(error);
+            })
+            .finally(() => {
+                pageItems.waitIndicator.style.display = 'none';
+                pageItems.loadData.disabled = false;
+            });
+    }
+
     app.startPromisesDemo = function () {
         pageItems.loadData = document.getElementById('loadData');
         pageItems.waitIndicator = document.getElementById('wait-indicator')
@@ -26,7 +89,7 @@
             });
             console.log(result2)
         }
-        catch(error) {
+        catch (error) {
             console.log(`There was an error in ${error}`)
         }
 
