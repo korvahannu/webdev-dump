@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Libraries</title>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <h1>External JavaScript Libraries</h1>
+        <form id="taskForm" action="" method="post">
+            <div>
+                <label for="taskInput">Task: </label>
+                <input name="taskInput" id="taskInput" required type="text" />
+            </div>
+            <div>
+                <button type="submit" id="submit">Add Task</button>
+                <button type="reset">Clear Form</button>
+            </div>
+            <ol id="taskList"></ol>
+        </form>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </main>
+    <script src="js/luxon.min.js"></script>
+    <script>
+        window.DateTime = luxon.DateTime;
+        const value = DateTime.now().setZone('America/New_York').minus({ weeks: 1 }).endOf('day').toISO();
+        console.log(value);
+    </script>
+</body>
+
+</html>

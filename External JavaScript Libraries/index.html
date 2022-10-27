@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Libraries</title>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <h1>External JavaScript Libraries</h1>
+        <form id="taskForm" action="" method="post">
+            <div>
+                <label for="taskInput">Task: </label>
+                <input name="taskInput" id="taskInput" required type="text" />
+            </div>
+            <div>
+                <button type="submit" id="submit">Add Task</button>
+                <button type="reset">Clear Form</button>
+            </div>
+            <ol id="taskList"></ol>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        const form = $('#taskForm');
+        const taskList = $('#taskList');
+        const taskInput = $('#taskInput');
+
+        form.submit((event) => {
+            event.preventDefault();
+
+            const newTask = document.createElement('li');
+            newTask.innerText = taskInput.val();
+
+            taskList.append(newTask);
+            taskInput.val('');
+        });
+
+        // Has to be function, not arrow function
+        $(document).on('click', 'li', function() {
+            $(this).toggleClass('completed-task');
+        });
+    </script>
+</body>
+
+</html>
