@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ally's Portfolio</title>
+
+        <meta
+            name="description"
+            content="The portfolio page for Ally Reynolds, including samples and contact information."
+        />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="css/site.css" />
+    </head>
+
+    <body>
+        <main>
+            <div class="hero">
+                <h1>
+                    Hi, I'm<br />
+                    Ally
+                </h1>
+                <img src="img/Ally2.png" alt="A picture of Ally smiling." />
+            </div>
+            <div id="contact-me">
+                <h2>This is how to contact me</h2>
+                <form id="contact-form" action="" method="post">
+                    <label for="name">Full Name: </label>
+                    <input type="text" name="name" id="name" required />
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required />
+                    <label for="message">Message: </label>
+                    <textarea
+                        style="resize: none"
+                        name="message"
+                        id="message"
+                        rows="5"
+                        required
+                    ></textarea>
+                    <div>
+                        <button type="submit">Contact Ally</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+            <div id="portfolio-section">
+                <div>
+                    <h2>This is some my work</h2>
+                    <a href="portfolio.html">see more</a>
+                </div>
+                <img
+                    src="img/LandingPageCollage.png"
+                    alt="My portfolio collage, including images of my adoption campaign, restaurant site and kids sports site."
+                />
+            </div>
+            <div id="my-story">
+                <h2>This is my story</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odio iusto facere minima esse quidem nobis explicabo iure
+                    nihil itaque praesentium, debitis, corporis magni vero.
+                    Ipsum!
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iusto esse at et quis fugiat totam optio error alias eos
+                    reprehenderit?
+                </p>
+            </div>
+        </main>
+        <footer>
+            &copy <span id="copyright-year">template</span> by Ally Reynolds
+        </footer>
+        <script src="js/app.js"></script>
+        <script>
+            app.homepage();
+        </script>
+    </body>
+</html>
